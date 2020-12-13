@@ -73,14 +73,12 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
     public void onPageSelected(int position) {
         if (currentPosition == position) return;
 
-        TabView beforeChildView = (TabView) containerView.getChildAt(currentPosition);
+        View beforeChildView = containerView.getChildAt(currentPosition);
         beforeChildView.setSelected(false);
-        beforeChildView.refreshTabBackground(false);
 
         this.currentPosition = position;
-        TabView currentChildView = (TabView) containerView.getChildAt(currentPosition);
+        View currentChildView = containerView.getChildAt(currentPosition);
         currentChildView.setSelected(true);
-        currentChildView.refreshTabBackground(true);
 
         if (mScrollState == ViewPager.SCROLL_STATE_IDLE) {
             scrollToTab(position, 0);
@@ -173,6 +171,16 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
                         else {
                             onClickTabListener.onClickTab(currentPos);
                         }
+                        for(int index = 0; index < getChildCount(); index++) {
+                            TabView nextChild = (TabView) getChildAt(index);
+                            if(index == currentPos) {
+                                nextChild.refreshTabBackground(true);
+                            }
+                            else {
+                                nextChild.refreshTabBackground(false);
+                            }
+                        }
+
                     }
                 });
                 tabView.init(context);
