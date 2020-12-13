@@ -45,6 +45,7 @@
 
         <attr name="tab_badge_size" format="dimension"/>
         <attr name="tab_background" format="integer" />
+        <attr name="tab_background_selected" format="integer" />
 
 
     </declare-styleable>

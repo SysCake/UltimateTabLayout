@@ -33,6 +33,7 @@ public class TabModel {
     private int tabBadgeSize;
 
     private int tabBackground;
+    private int tabBackgroundSelected;
 
     public TabModel(Builder builder){
         this.tabTextSize = builder.tabTextSize;
@@ -62,6 +63,7 @@ public class TabModel {
         this.tabBadgeSize = builder.tabBadgeSize;
 
         this.tabBackground = builder.tabBackground;
+        this.tabBackgroundSelected = builder.tabBackgroundSelected;
     }
 
     public static class Builder {
@@ -92,6 +94,7 @@ public class TabModel {
         private int tabBadgeSize;
 
         private int tabBackground;
+        private int tabBackgroundSelected;
 
         public Builder(boolean tabUnderLineShow, int tabHeightUnderLine, int tabOrientation) {
             this.tabUnderLineShow = tabUnderLineShow;
@@ -179,6 +182,11 @@ public class TabModel {
             return this;
         }
 
+        public Builder setTabBackgroundSelected(int tabBackgroundSelected){
+            this.tabBackgroundSelected = tabBackgroundSelected;
+            return this;
+        }
+
         public TabModel build(){
             return new TabModel(this);
         }
@@ -259,5 +267,8 @@ public class TabModel {
 
     public int getTabBackground(){
         return tabBackground;
+    }
+    public int getTabBackgroundSelected(){
+        return tabBackgroundSelected;
     }
 }

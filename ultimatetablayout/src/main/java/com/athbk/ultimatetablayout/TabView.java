@@ -71,6 +71,9 @@ public class TabView extends LinearLayout implements View.OnClickListener {
     @DrawableRes
     private int tabBackground;
 
+    @DrawableRes
+    private int tabBackgroundSelected;
+
     private OnClickTabListener onClickTabListener;
 
     public TabView(Context context) {
@@ -137,6 +140,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
         if(tabBackground != 0){
             setBackgroundResource(tabBackground);
         }
+
 
 
         switch (positionIcon){
@@ -314,6 +318,24 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     public void setTabBackground(int tabBackground){
         this.tabBackground = tabBackground;
+    }
+    public void setTabBackgroundSelected(int tabBackgroundSelected){
+        this.tabBackgroundSelected = tabBackgroundSelected;
+    }
+
+    public void refreshTabBackground(boolean isSelected) {
+
+        if(isSelected){
+            if(tabBackgroundSelected != 0){
+                setBackgroundResource(tabBackgroundSelected);
+            }
+        }
+        else {
+            if(tabBackground != 0){
+                setBackgroundResource(tabBackground);
+            }
+        }
+
     }
 
     @Override

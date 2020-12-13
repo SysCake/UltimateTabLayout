@@ -58,6 +58,7 @@ public class UltimateTabLayout extends FrameLayout {
     private int tabBadgeSize = 10; // default
 
     private int tabBackground;
+    private int tabBackgroundSelected;
 
     private Paint mPaintUnderLine;
 
@@ -119,6 +120,7 @@ public class UltimateTabLayout extends FrameLayout {
         tabBadgeSize = (int) ta.getDimension(R.styleable.UltimateTabLayout_tab_badge_size, defaultSizeBadge);
 
         tabBackground = ta.getResourceId(R.styleable.UltimateTabLayout_tab_background, 0);
+        tabBackgroundSelected = ta.getResourceId(R.styleable.UltimateTabLayout_tab_background, 0);
 
         mPaintUnderLine = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaintUnderLine.setColor(tabUnderLineColor);
@@ -147,6 +149,7 @@ public class UltimateTabLayout extends FrameLayout {
                 .setTabStyleBadge(styleBadge)
                 .setTabBadgeSize(tabBadgeSize)
                 .setTabBackground(tabBackground)
+                .setTabBackgroundSelected(tabBackgroundSelected)
                 .build();
 
 
@@ -271,6 +274,9 @@ public class UltimateTabLayout extends FrameLayout {
 
     }
 
+    public void setTabBackgroundSelected(int tabBackgroundSelected) {
+        this.tabBackgroundSelected = tabBackgroundSelected;
+    }
     public void setTabBackground(int tabBackground) {
         this.tabBackground = tabBackground;
     }
