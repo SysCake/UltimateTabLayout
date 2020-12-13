@@ -8,7 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-
+import android.util.Log;
 /**
  * Created by athbk on 8/17/17.
  */
@@ -125,6 +125,7 @@ public class UltimateTabLayout extends FrameLayout {
     }
 
     public void setViewPager(final ViewPager viewPager, IFTabAdapter tabAdapterIF){
+        Log.d("syscake", "version0");
         TabModel tabModel = new TabModel.Builder(tabUnderLineShow, (int) heightUnderLine, tabOrientation)
                 .setTabHeight((int)tabHeight)
                 .setTabHeightIcon(tabHeightIcon)
