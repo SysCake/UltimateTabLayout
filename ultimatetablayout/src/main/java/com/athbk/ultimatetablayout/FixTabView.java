@@ -177,7 +177,8 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
                 addView(tabView);
             }
 
-            View childView = getChildAt(0);
+            TabView childView = (TabView) getChildAt(0);
+            childView.refreshTabBackground(true);
             childView.setSelected(true);
             requestLayout();
 
