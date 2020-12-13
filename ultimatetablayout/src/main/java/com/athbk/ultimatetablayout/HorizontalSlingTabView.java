@@ -166,6 +166,7 @@ public class HorizontalSlingTabView extends HorizontalScrollView implements View
                     tabView.setStyleBadge(0);
                 }
                 tabView.setBadgeSize(tabModel.getTabBadgeSize());
+                tabView.setTabBackground(tabModel.getTabBackground());
                 tabView.setCurrentPos(i);
                 tabView.setOnClickTabListener(new OnClickTabListener() {
                     @Override

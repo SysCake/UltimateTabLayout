@@ -152,6 +152,7 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
                 tabView.setHeight(tabModel.getTabHeight());
                 tabView.setWidth(tabModel.getTabWidth());
                 tabView.setTabResourceFont(tabModel.getTabResourceFont());
+                tabView.setTabBackground(tabModel.getTabBackground());
                 tabView.setCurrentPos(i);
                 if (tabAdapterIF.isEnableBadge(i)) {
                     tabView.setStyleBadge(tabModel.getTabStyleBadge());

@@ -32,6 +32,8 @@ public class TabModel {
     private int tabStyleBadge = 0; // update version 1.2.7
     private int tabBadgeSize;
 
+    private int tabBackground;
+
     public TabModel(Builder builder){
         this.tabTextSize = builder.tabTextSize;
         this.tabTextColor = builder.tabTextColor;
@@ -58,6 +60,8 @@ public class TabModel {
         this.tabResourceFont = builder.tabResourceFont;
         this.tabStyleBadge = builder.tabStyleBadge;
         this.tabBadgeSize = builder.tabBadgeSize;
+
+        this.tabBackground = builder.tabBackground;
     }
 
     public static class Builder {
@@ -86,6 +90,8 @@ public class TabModel {
         private String tabResourceFont; // update version 1.2.4
         private int tabStyleBadge = 0; // update version 1.2.7
         private int tabBadgeSize;
+
+        private int tabBackground;
 
         public Builder(boolean tabUnderLineShow, int tabHeightUnderLine, int tabOrientation) {
             this.tabUnderLineShow = tabUnderLineShow;
@@ -168,6 +174,11 @@ public class TabModel {
             return this;
         }
 
+        public Builder setTabBackground(int tabBackground){
+            this.tabBackground = tabBackground;
+            return this;
+        }
+
         public TabModel build(){
             return new TabModel(this);
         }
@@ -244,5 +255,9 @@ public class TabModel {
 
     public int getTabBadgeSize() {
         return tabBadgeSize;
+    }
+
+    public int getTabBackground(){
+        return tabBackground;
     }
 }

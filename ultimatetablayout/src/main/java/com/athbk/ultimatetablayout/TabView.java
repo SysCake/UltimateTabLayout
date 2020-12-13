@@ -68,6 +68,9 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     private int currentPos;
 
+    @DrawableRes
+    private int tabBackground;
+
     private OnClickTabListener onClickTabListener;
 
     public TabView(Context context) {
@@ -129,6 +132,10 @@ public class TabView extends LinearLayout implements View.OnClickListener {
             catch (Exception e){
                 e.printStackTrace();
             }
+        }
+
+        if(tabBackground != 0){
+            setBackgroundResource(tabBackground);
         }
 
 
@@ -303,6 +310,10 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     public void setNumberBadge(int count){
         if (badgeView != null) badgeView.setNumberBadge(count);
+    }
+
+    public void setTabBackground(int tabBackground){
+        this.tabBackground = tabBackground;
     }
 
     @Override
