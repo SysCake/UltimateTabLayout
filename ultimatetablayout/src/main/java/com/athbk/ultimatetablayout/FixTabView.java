@@ -66,12 +66,24 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
     public void onPageSelected(int position) {
         if (currentPosition == position) return;
 
-        View beforeChildView = getChildAt(currentPosition);
+        TabView beforeChildView = (TabView) getChildAt(currentPosition);
         beforeChildView.setSelected(false);
+        beforeChildView.refreshTabBackground(false);
 
         this.currentPosition = position;
-        View currentChildView = getChildAt(currentPosition);
+        TabView currentChildView = (TabView) getChildAt(currentPosition);
         currentChildView.setSelected(true);
+        currentChildView.refreshTabBackground(true);
+        /*
+        for(int index = 0; index < getChildCount(); index++) {
+            TabView nextChild = (TabView) getChildAt(index);
+            if(index == currentPos) {
+                nextChild.refreshTabBackground(true);
+            }
+            else {
+                nextChild.refreshTabBackground(false);
+            }
+        }*/
     }
 
     @Override

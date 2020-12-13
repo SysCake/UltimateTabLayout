@@ -171,15 +171,6 @@ public class VerticalSlingTabView extends ScrollView implements ViewPager.OnPage
                         else {
                             onClickTabListener.onClickTab(currentPos);
                         }
-                        for(int index = 0; index < getChildCount(); index++) {
-                            TabView nextChild = (TabView) getChildAt(index);
-                            if(index == currentPos) {
-                                nextChild.refreshTabBackground(true);
-                            }
-                            else {
-                                nextChild.refreshTabBackground(false);
-                            }
-                        }
 
                     }
                 });
