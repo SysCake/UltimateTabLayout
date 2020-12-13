@@ -152,6 +152,7 @@ public class FixTabView extends LinearLayout implements ViewPager.OnPageChangeLi
                 tabView.setWidth((int)tabModel.getTabWidth());
                 tabView.setTabResourceFont(tabModel.getTabResourceFont());
                 tabView.setTabBackground(tabModel.getTabBackground());
+                tabView.setTabBackgroundSelected(tabModel.getTabBackgroundSelected());
                 tabView.setCurrentPos(i);
                 if (tabAdapterIF.isEnableBadge(i)) {
                     tabView.setStyleBadge(tabModel.getTabStyleBadge());
