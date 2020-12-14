@@ -123,7 +123,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
                 tvTitle.setTextColor(getResources().getColorStateList(textColor));
             }
             tvTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, textSize);
-            ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            ViewGroup.LayoutParams textLayoutParams = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             tvTitle.setLayoutParams(textLayoutParams);
         }
 
