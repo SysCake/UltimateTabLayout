@@ -90,7 +90,7 @@ public class TabView extends LinearLayout implements View.OnClickListener {
 
     public void init(Context context){
         if (width == -1){
-            width = ViewGroup.LayoutParams.WRAP_CONTENT;
+            width = ViewGroup.LayoutParams.MATCH_PARENT;
         }
         if (height == -1){
             height = ViewGroup.LayoutParams.WRAP_CONTENT;
